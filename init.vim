@@ -112,3 +112,14 @@ vnoremap <silent><buffer> <F5> :QuickRun -mode v -type tmptex<CR>
 nnoremap <silent><F5> :QuickRun<CR>
 
 autocmd BufWritePost,FileWritePost *.tex QuickRun tex
+
+" 英数字の自動切り替え
+if executable('osascript')
+  let s:keycode_jis_eisuu = 102
+  let g:force_alphanumeric_input_command = "osascript -e 'tell application \"System Events\" to key code " . s:keycode_jis_eisuu . "' &"
+
+  inoremap <silent> <Esc> <Esc>:call system(g:force_alphanumeric_input_command)<CR>
+
+  autocmd! FocusGained *
+    \ call system(g:force_alphanumeric_input_command)
+endif
