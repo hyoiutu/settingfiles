@@ -33,80 +33,25 @@ endif
 
 execute 'set runtimepath^=' . s:dein_repo_dir
 
-if dein#load_state(s:dein_dir)
-    call dein#begin(s:dein_dir)
+call dein#begin(s:dein_dir)
 
-    let s:toml = '~/.config/nvim/dein/plugins.toml'
-    let s:lazy_toml = '~/.config/nvim/dein/plugins_lazy.toml'
-    call dein#load_toml(s:toml, {'lazy': 0})
-    call dein#load_toml(s:lazy_toml, {'lazy': 1})
+"if dein#load_state(s:dein_dir)
+"    call dein#begin(s:dein_dir)
+"
+"   let s:toml = '~/.config/nvim/dein/plugins.toml'
+"    let s:lazy_toml = '~/.config/nvim/dein/plugins_lazy.toml'
+"    call dein#load_toml(s:toml, {'lazy': 0})
+"    call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-    call dein#end()
-    call dein#save_state()
+"    call dein#end()
+"    call dein#save_state()
+"endif
+
+if dein#check_install(['vimproc'])
+  call dein#install(['vimproc'])
 endif
 
 if dein#check_install()
     call dein#install()
 endif
-" }}}
-
-
-" quickrunの設定
-" LaTeX Quickrun
-let g:quickrun_config = {}
-let g:quickrun_config['tex'] = {
-\ 'command' : 'latexmk',
-\ 'outputter' : 'error',
-\ 'outputter/error/success' : 'null',
-\ 'outputter/error/error' : 'quickfix',
-\ 'srcfile' : expand("%"),
-\ 'cmdopt': '-pdfdvi -pv',
-\ 'hook/sweep/files' : [
-\                      '%S:p:r.aux',
-\                      '%S:p:r.bbl',
-\                      '%S:p:r.blg',
-\                      '%S:p:r.dvi',
-\                      '%S:p:r.fdb_latexmk',
-\                      '%S:p:r.fls',
-\                      '%S:p:r.log',
-\                      '%S:p:r.out'
-\                      ],
-\ 'exec': '%c %o %a %s',
-\}
-
-" 部分的に選択してコンパイル
-" http://auewe.hatenablog.com/entry/2013/12/25/033416 を参考に
-let g:quickrun_config.tmptex = {
-\   'exec': [
-\           'mv %s %a/tmptex.latex',
-\           'latexmk -pdfdvi -pv -output-directory=%a %a/tmptex.latex',
-\           ],
-\   'args' : expand("%:p:h:gs?\\\\?/?"),
-\   'outputter' : 'error',
-\   'outputter/error/error' : 'quickfix',
-\
-\   'hook/eval/enable' : 1,
-\   'hook/eval/cd' : "%s:r",
-\
-\   'hook/eval/template' : '\documentclass[uplatex,a4j]{jsarticle}'
-\                         .'\begin{document}'
-\                         .'%s'
-\                         .'\end{document}',
-\
-\   'hook/sweep/files' : [
-\                        '%a/tmptex.latex',
-\                        '%a/tmptex.out',
-\                        '%a/tmptex.fdb_latexmk',
-\                        '%a/tmptex.log',
-\                        '%a/tmptex.aux',
-\                        '%a/tmptex.dvi'
-\                        ],
-\}
-
-vnoremap <silent><buffer> <F5> :QuickRun -mode v -type tmptex<CR>
-
-" QuickRun and view compile result quickly (but don't preview pdf file)
-nnoremap <silent><F5> :QuickRun<CR>
-
-autocmd BufWritePost,FileWritePost *.tex QuickRun tex
-
+" }}}'
