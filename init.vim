@@ -1,7 +1,23 @@
-" シンボリックリンクを使わない人は${XDG_CONFIG_HOME}/nvim/init.vim
-if has('nvim')
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
+"nvim settings
+set smarttab "タブで空白を挿入できるようになる 
+set expandtab "タブ入力を複数の空白入力に置き換える
+set tabstop=4 "画面上でタブ文字が占める幅
+set shiftwidth=4 "自動インデントでずれる幅
+set autoindent "改行時に前の行のインデントを継続する
+set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+set clipboard=unnamed,unnamedplus "クリップボードを有効化
+
+" カッコやクォートの自動補完
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+vnoremap { "zdi^V{<C-R>z}<ESC>
+vnoremap [ "zdi^V[<C-R>z]<ESC>
+vnoremap ( "zdi^V(<C-R>z)<ESC>
+vnoremap " "zdi^V"<C-R>z^V"<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
 
 " dein settings {{{
 if &compatible
@@ -34,25 +50,6 @@ if dein#check_install()
 endif
 " }}}
 
-"nvim settings
-set expandtab "タブ入力を複数の空白入力に置き換える
-set tabstop=4 "画面上でタブ文字が占める幅
-set shiftwidth=4 "自動インデントでずれる幅
-set autoindent "改行時に前の行のインデントを継続する
-set smartindent "改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-set clipboard=unnamed,unnamedplus "クリップボードを有効化
-
-" カッコやクォートの自動補完
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-vnoremap { "zdi^V{<C-R>z}<ESC>
-vnoremap [ "zdi^V[<C-R>z]<ESC>
-vnoremap ( "zdi^V(<C-R>z)<ESC>
-vnoremap " "zdi^V"<C-R>z^V"<ESC>
-vnoremap ' "zdi'<C-R>z'<ESC>
 
 " quickrunの設定
 " LaTeX Quickrun
@@ -113,13 +110,3 @@ nnoremap <silent><F5> :QuickRun<CR>
 
 autocmd BufWritePost,FileWritePost *.tex QuickRun tex
 
-" 英数字の自動切り替え
-if executable('osascript')
-  let s:keycode_jis_eisuu = 102
-  let g:force_alphanumeric_input_command = "osascript -e 'tell application \"System Events\" to key code " . s:keycode_jis_eisuu . "' &"
-
-  inoremap <silent> <Esc> <Esc>:call system(g:force_alphanumeric_input_command)<CR>
-
-  autocmd! FocusGained *
-    \ call system(g:force_alphanumeric_input_command)
-endif
