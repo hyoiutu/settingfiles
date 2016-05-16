@@ -24,8 +24,8 @@ if &compatible
   set nocompatible
 endif
 
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '~/.config/nvim/dein/repos/github.com/Shougo/dein.vim'
+let s:dein_dir = expand('~/.cache/nvim/dein')
+let s:dein_repo_dir = s:dein_dir . 'repos/github.com/Shougo/dein.vim'
 
 if !isdirectory(s:dein_repo_dir)
   execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
