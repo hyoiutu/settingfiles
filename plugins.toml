@@ -1,73 +1,14 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# ---
-
-# Toml
-[[plugins]]
-repo  = 'cespare/vim-toml'
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-# Markdown
-[[plugins]]
-repo = 'rcmdnk/vim-markdown'
-on_ft = ['markdown','mkd']
-hook_add = '''
-  let g:vim_markdown_frontmatter = 1
-  let g:vim_markdown_math = 1
-'''
-
-# Golang
-[[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
-
-# Japanese doc
-[[plugins]]
-repo = 'vim-jp/vimdoc-ja'
-on_ft = 'help'
-
-# ---
-
-# hybrid
-[[plugins]]
+[[plugins]] # カラースキーマ
 repo = 'w0ng/vim-hybrid'
-
-# solarized
-[[plugins]]
-repo = 'altercation/vim-colors-solarized'
-
-# ---
-
-# ステータスライン
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-  let g:lightline = { 'colorscheme': 'wombat' }
+on_event = ['VimEnter'] # 非遅延プラグインだと hook_post_source が効かないのでなんちゃってlazy化
+hook_post_source = '''
+  set background=dark
+  colorscheme hybrid
 '''
-
-[[plugins]]
-repo = 'tyru/open-browser.vim'
-hook_add = '''
-  let g:openbrowser_menu_lang = 'ja'
-'''
-
-[[plugins]]
-repo = 'tell-k/vim-browsereload-mac'
-if = 'has("mac")'
-
-# deoplete
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add= '''
-  let g:deoplete#enable_at_startup = 1
-'''
-
-# texvim
-[[plugins]]
-repo = 'lervag/vimtex'
-
-# vim-quickrun
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
