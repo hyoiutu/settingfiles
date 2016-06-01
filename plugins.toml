@@ -12,3 +12,8 @@ hook_post_source = '''
   set background=dark
   colorscheme hybrid
 '''
+[[plugins]] #補完機能
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+'''
