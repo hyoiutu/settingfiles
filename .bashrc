@@ -117,10 +117,11 @@ if ! shopt -oq posix; then
 fi
 # aliases
 alias vim='nvim'
-alias editmemo='vim LaTeXmemorandum/LaTeXmemorandum.tex'
-alias memorandum='xdg-open ~/LaTeXmemorandum/LaTeXmemorandum.pdf'
+alias editmemo='atom ~/LocalRepositories/LaTeXmemorandum/LaTeXmemorandum.tex'
+alias memorandum='xdg-open ~/LocalRepositories/LaTeXmemorandum/LaTeXmemorandum.pdf'
 alias gdrive_m='google-drive-ocamlfuse ~/googledrive'
 alias gdrive_u='fusermount -u ~/googledrive'
+alias refcls='atom /usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltjsarticle.cls'
 # LinuxBrew settings
 
 export PATH="$HOME/.linuxbrew/bin:$PATH"
