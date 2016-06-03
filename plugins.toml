@@ -9,6 +9,7 @@ on_ft = 'toml'
 repo = 'w0ng/vim-hybrid'
 on_event = ['VimEnter'] # 非遅延プラグインだと hook_post_source が効かないのでなんちゃってlazy化
 hook_post_source = '''
-  set background=dark
+  set t_Co=256
+  set background=black
   colorscheme hybrid
 '''
