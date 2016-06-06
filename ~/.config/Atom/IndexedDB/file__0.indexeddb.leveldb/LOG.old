@@ -1,1 +1,9 @@
-2016/06/03-17:43:08.469 7257 Reusing MANIFEST /home/keisuke/LocalRepositories/settingfiles/~/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2016/06/03-19:05:27.084 8532 Reusing MANIFEST /home/keisuke/LocalRepositories/settingfiles/~/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2016/06/03-19:05:27.084 8532 Recovering log #3
+2016/06/03-19:05:27.089 8532 Reusing old log /home/keisuke/LocalRepositories/settingfiles/~/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/000003.log 
+2016/06/03-19:12:19.641 8836 Level-0 table #5: started
+2016/06/03-19:12:19.754 8836 Level-0 table #5: 1465436 bytes OK
+2016/06/03-19:12:19.803 8836 Delete type=0 #3
+2016/06/03-19:17:11.409 8836 Level-0 table #7: started
+2016/06/03-19:17:11.510 8836 Level-0 table #7: 1367565 bytes OK
+2016/06/03-19:17:11.542 8836 Delete type=0 #4
