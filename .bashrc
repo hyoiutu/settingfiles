@@ -127,7 +127,7 @@ alias refcls='atom /usr/share/texlive/texmf-dist/tex/luatex/luatexja/ltjsarticle
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-export XDG_CONFIG_HOME="~/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # secret key settings
 eval `ssh-agent`
