@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 # aliases
-alias vim='nvim'
+# test
 alias editmemo='atom ~/LocalRepositories/LaTeXmemorandum/LaTeXmemorandum.tex'
 alias memorandum='xdg-open ~/LocalRepositories/LaTeXmemorandum/LaTeXmemorandum.pdf'
 alias gdrive_m='google-drive-ocamlfuse ~/googledrive'
@@ -133,5 +133,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 eval `ssh-agent`
 ssh-add ~/.ssh/github_rsa
 
+# anyenv settings
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
