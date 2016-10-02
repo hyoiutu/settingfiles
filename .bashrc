@@ -132,3 +132,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # secret key settings
 eval `ssh-agent`
 ssh-add ~/.ssh/github_rsa
+
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
