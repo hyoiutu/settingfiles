@@ -136,3 +136,7 @@ ssh-add ~/.ssh/github_rsa
 # anyenv settings
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# burp suite settings
+export PATH="/opt/BurpSuiteFree:$PATH"
+alias burpsuite='BurpSuiteFree'
