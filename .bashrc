@@ -140,3 +140,9 @@ eval "$(anyenv init -)"
 # burp suite settings
 export PATH="/opt/BurpSuiteFree:$PATH"
 alias burpsuite='BurpSuiteFree'
+
+# texlive2016 settings
+export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux
+
+# java home settings
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/bin/java 
