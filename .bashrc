@@ -144,3 +144,13 @@ export PATH="${PATH}:${SRILM}/bin:${SRILM}/bin/i686-m64"
 # mecab-java settings
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 
+# burp suite settings
+export PATH="/opt/BurpSuiteFree:$PATH"
+alias burpsuite='BurpSuiteFree'
+
+# texlive2016 settings
+export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux
+
+# java home settings
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/bin/java 
+>>>>>>> 8f765fc55d09e67c13874b6527b84ad8f1a5e5b5
