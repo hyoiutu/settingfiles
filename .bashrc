@@ -136,3 +136,11 @@ ssh-add ~/.ssh/github_rsa
 # anyenv settings
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# srilm settings
+export SRILM="${HOME}/Downloads/srilm"
+export PATH="${PATH}:${SRILM}/bin:${SRILM}/bin/i686-m64"
+
+# mecab-java settings
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
+
