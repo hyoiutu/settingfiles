@@ -153,4 +153,3 @@ export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux
 
 # java home settings
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/bin/java 
->>>>>>> 8f765fc55d09e67c13874b6527b84ad8f1a5e5b5
