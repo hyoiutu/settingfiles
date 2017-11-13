@@ -18,3 +18,10 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
 '''
+
+[[plugins]] #括弧などを補完する機能
+repo = 'cohama/lexima.vim'
+hook_add = '''
+'''
+
+

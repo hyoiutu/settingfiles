@@ -153,3 +153,13 @@ export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux
 
 # java home settings
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/bin/java 
+
+# myStudySetting
+export MY_STUDY=/home/uhhyoi/LocalRepositories/myStudy
+
+# my lua setting
+export LUA_CFLAGS='-I/usr/include -lm -ldl'
+export LUA_LIBS='/usr/lib/liblua.a'
+
+# neovim setting
+alias vim="nvim"
