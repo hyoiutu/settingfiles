@@ -24,4 +24,13 @@ repo = 'cohama/lexima.vim'
 hook_add = '''
 '''
 
+[[plugins]] #python用の補完プラグイン
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'
 
+#[[plugins]] #タブ補完を効かせる
+#repo = 'ervandew/supertab'
+
+[[plugins]] # pythonのシンタックスチェックプラグイン
+repo = 'nvie/vim-flake8'
+on_ft = 'python'

@@ -163,3 +163,6 @@ export LUA_LIBS='/usr/lib/liblua.a'
 
 # neovim setting
 alias vim="nvim"
+
+# flask8 setting
+export PATH="${PATH}:${PYENV_ROOT}/versions/3.6.0/bin/"

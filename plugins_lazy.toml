@@ -22,3 +22,5 @@ on_path = '.*'
 [[plugins]]
 repo = 'tpope/vim-surround'
 on_path = '.*'
+
+

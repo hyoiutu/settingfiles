@@ -53,3 +53,9 @@ if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 " }}}
+
+" jedi-vim setting
+let g:python3_host_prog=$PYENV_ROOT.'/versions/3.6.0/bin/python'
+
+" vim-flake8 setting
+autocmd BufWritePost *.py call Flake8() " 保存時にflake8を実行する
