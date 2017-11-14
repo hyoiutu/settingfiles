@@ -34,3 +34,11 @@ on_ft = 'python'
 [[plugins]] # pythonのシンタックスチェックプラグイン
 repo = 'nvie/vim-flake8'
 on_ft = 'python'
+
+[[plugins]] # pythonのインデントをPEP8に準拠させる
+repo = 'Vimjas/vim-python-pep8-indent'
+on_ft = 'python'
+
+[[plugins]] # pythonのインデントを可視化
+repo = 'nathanaelkane/vim-indent-guides'
+on_ft = 'python'

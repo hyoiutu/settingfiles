@@ -59,3 +59,9 @@ let g:python3_host_prog=$PYENV_ROOT.'/versions/3.6.0/bin/python'
 
 " vim-flake8 setting
 autocmd BufWritePost *.py call Flake8() " 保存時にflake8を実行する
+
+"vim-indent-guides setting
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
