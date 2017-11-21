@@ -1,4 +1,4 @@
-[[plugins]]
+#[[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]] # toml syntax
@@ -42,3 +42,10 @@ on_ft = 'python'
 [[plugins]] # pythonのインデントを可視化
 repo = 'nathanaelkane/vim-indent-guides'
 on_ft = 'python'
+
+[[plugins]] # vimでTeXを使うプラグイン
+repo = 'lervag/vimtex'
+on_ft = 'tex'
+
+[[plugins]] # vimでTeXをタイプセットする
+repo = 'thinca/vim-quickrun'
