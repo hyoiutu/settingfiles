@@ -1,4 +1,8 @@
 #!/usr/bin/env perl
+add_cus_dep('pytxcode','tex',0,'pythontex');
+add_cus_dep('tex','dvi',0,'retypeset');
+sub pythontex { return system("pythontex \"$_[0]\""); }
+sub retypeset { return system("$latex \"$_[0]\""); }
 # latex ...tex -> dvi へのコンパイルのコマンドに関する指定
 # uplatex ... コンパイルのコマンド
 # -shell-escape ... オプション，任意の外部コマンド実行可能
@@ -21,6 +25,8 @@ $max_repeat       = 5;
 # pdf_mode ... コンパイルのモードを指定する
 # 3 ... texからdviを生成し，更にpdfファイルを生成するモード
 $pdf_mode     = 3; # generates pdf via dvipdfmx
+#$pdf_update_method = 4;
+#$pdf_update_command = "rm -r pythontex-files-%R;pythontex %R.pytxcode && $latex %T";
 
 # 古いPDFファイルを削除せず上書きする
 $pvc_view_file_via_temporary = 0;

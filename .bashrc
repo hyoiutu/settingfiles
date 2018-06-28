@@ -164,5 +164,16 @@ export LUA_LIBS='/usr/lib/liblua.a'
 # neovim setting
 alias vim="nvim"
 
-# flask8 setting
+# pip setting
 export PATH="${PATH}:${PYENV_ROOT}/versions/3.6.0/bin/"
+export PATH="${PATH}:${PYENV_ROOT}/versions/3.6.1/bin/"
+
+# gem setting
+export PATH="${PATH}:${HOME}/.gem/ruby/2.4.0/bin"
+
+# chara code setting
+export LANG=ja_JP.UTF-8
+export LANG
+
+# setting files path
+export SETTING_FILES_PATH="${HOME}/LocalRepositries/github/settingfiles"

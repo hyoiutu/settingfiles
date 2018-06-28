@@ -18,3 +18,5 @@ expect {
     eof { exit 0 }
 }
 "
+
+export PATH="$HOME/.cargo/bin:$PATH"
